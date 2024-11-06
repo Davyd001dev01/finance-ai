@@ -1,6 +1,6 @@
 //export interface pageProps { }
 
-export default function Subscription() {
+export default function SubscriptionPage() {
   return (
     <div>
       Hello World

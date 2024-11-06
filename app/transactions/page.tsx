@@ -1,6 +1,6 @@
 //export interface pageProps { }
 
-export default function Transactions() {
+export default function TransactionsPage() {
   return (
     <div>
       Hello World
