@@ -1,9 +1,7 @@
 //export interface pageProps { }
 
+import Navbar from "../_components/navbar";
+
 export default function SubscriptionPage() {
-  return (
-    <div>
-      Hello World
-    </div>
-  )
+  return <Navbar />;
 }
