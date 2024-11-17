@@ -40,7 +40,7 @@ export const transactionColumns: ColumnDef<Transaction>[] = [
       return (
         <Badge className="bg-white bg-opacity-10 font-bold text-white">
           <Circle className="mr-2 fill-white" size={10} />
-          Despesa
+          Investimento
         </Badge>
       );
     },
