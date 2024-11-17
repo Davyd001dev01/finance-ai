@@ -4,12 +4,13 @@ import { Transaction, TransactionType } from "@prisma/client";
 import { ColumnDef } from "@tanstack/react-table";
 // import TransactionTypeBadge from "../_components/type-badge";
 import { Badge } from "@/app/_components/ui/badge";
-import { Circle, PencilIcon, Trash } from "lucide-react";
+import { Circle, Trash } from "lucide-react";
 import { Button } from "@/app/_components/ui/button";
 import {
   TRANSACTION_CATEGORY_LABELS,
   TRANSACTION_PAYMENT_METHOD_LABELS,
 } from "@/app/_constants/transactions";
+import EditTransactionButton from "../_components/edit-transaction-button";
 
 export const transactionColumns: ColumnDef<Transaction>[] = [
   {
@@ -78,12 +79,10 @@ export const transactionColumns: ColumnDef<Transaction>[] = [
   {
     accessorKey: "action",
     header: "",
-    cell: () => {
+    cell: ({ row: { original: transaction } }) => {
       return (
         <div className="space-x-1">
-          <Button variant="ghost" size="icon" className="text-muted-foreground">
-            <PencilIcon />
-          </Button>
+          <EditTransactionButton transaction={transaction} />
           <Button variant="ghost" size="icon" className="text-muted-foreground">
             <Trash />
           </Button>
