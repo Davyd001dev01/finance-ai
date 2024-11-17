@@ -17,7 +17,10 @@ export default async function TransactionsPage() {
         <h1 className="text-2xl font-bold">Tansações</h1>
         <AddTransactionButton />
       </div>
-      <DataTable columns={transactionColumns} data={transactions} />
+      <DataTable
+        columns={transactionColumns}
+        data={JSON.parse(JSON.stringify(transactions))}
+      />
     </div>
   );
 }
