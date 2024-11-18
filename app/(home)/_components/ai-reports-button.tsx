@@ -13,8 +13,8 @@ import {
 import { FileTextIcon, Loader2Icon } from "lucide-react";
 import { generateAiReport } from "../_actions/generate-ai-reports";
 import { useState } from "react";
-import { ScrollArea } from "@radix-ui/react-scroll-area";
 import Markdown from "react-markdown";
+import { ScrollArea } from "@/app/_components/ui/scroll-area";
 
 interface AiReportsButtonProps {
   month: string;

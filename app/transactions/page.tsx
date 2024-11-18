@@ -1,5 +1,4 @@
 //export interface pageProps { }
-
 import { db } from "../_lib/prisma";
 
 import { DataTable } from "../_components/ui/data-table";
@@ -16,7 +15,10 @@ export default async function TransactionsPage() {
   }
 
   // Take all register from my table
-  const transactions = await db.transaction.findMany({ where: { userId } });
+  const transactions = await db.transaction.findMany({
+    where: { userId },
+    orderBy: { date: "desc" },
+  });
 
   return (
     <>
