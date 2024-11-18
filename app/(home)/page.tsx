@@ -9,6 +9,7 @@ import { getDashboard } from "../_data/get-dashboard";
 import ExpensesPerCategory from "./_components/expenses-per-category";
 import LastTransactions from "./_components/last-transactions";
 import { ScrollArea } from "../_components/ui/scroll-area";
+import AiReportsButton from "./_components/ai-reports-button";
 // import { Button } from "./_components/ui/button";
 
 interface HomeProps {
@@ -38,7 +39,10 @@ export default async function Home({ searchParams: { month } }: HomeProps) {
       <div className="flex flex-col space-y-6 overflow-hidden p-6">
         <div className="flex justify-between">
           <h1 className="text-2xl font-bold">Dashboard</h1>
-          <TimeSelect />
+          <div className="flex items-center gap-3">
+            <AiReportsButton month={month} />
+            <TimeSelect />
+          </div>
         </div>
 
         <div className="grid grid-cols-[2fr,1fr] gap-6 overflow-hidden">
