@@ -23,7 +23,7 @@ export default async function TransactionsPage() {
   return (
     <>
       <Navbar />
-      <div className="space-y-6 overflow-scroll p-6">
+      <div className="space-y-6 overflow-scroll overflow-x-hidden p-6">
         {/* Title and Button */}
         <div className="flex w-full items-center justify-between">
           <h1 className="text-2xl font-bold">Tansações</h1>
